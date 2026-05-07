@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="980.0" style="-fx-background-color: linear-gradient(to bottom right, #FBEEC1, #D4D3DD);" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.agencija.SignUp">
+   <children>
+      <BorderPane maxHeight="400.0" maxWidth="600.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+         <bottom>
+            <AnchorPane maxHeight="595.0" maxWidth="642.0" prefHeight="595.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="116.0" fitWidth="119.0" layoutX="251.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="99.0" prefHeight="34.0" prefWidth="281.0" text="Create a new account" textFill="#484747">
+                     <font>
+                        <Font name="Ebrima Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblUsername" layoutX="143.0" layoutY="178.0" text="Full Name:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblUsername" layoutX="116.0" layoutY="219.0" text="Phone Number:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblUsername" layoutX="169.0" layoutY="261.0" text="Jmbg:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfName" layoutX="227.0" layoutY="174.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="83.0" promptText="Name">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <TextField fx:id="tfPhoneNumber" layoutX="227.0" layoutY="214.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="177.0" promptText="Enter Phone Number">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <TextField fx:id="tfJmbg" layoutX="227.0" layoutY="256.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="178.0" promptText="Enter Jmbg">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <TextField fx:id="tfLastName" layoutX="324.0" layoutY="174.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="83.0" promptText="Last Name">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <Label id="lblUsername" layoutX="72.0" layoutY="304.0" text="Bank Account Number:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfBankAccount" layoutX="227.0" layoutY="299.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="178.0" promptText="Enter Bank Account Number">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <Label id="lblUsername" layoutX="143.0" layoutY="346.0" text="Username:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfClientUsername" layoutX="227.0" layoutY="341.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="178.0" promptText="Enter Username">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <Label id="lblUsername" layoutX="147.0" layoutY="387.0" text="Password:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfClientPassword" layoutX="227.0" layoutY="382.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="178.0" promptText="Choose a Password">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <TextField fx:id="tfRepeatPassword" layoutX="227.0" layoutY="423.0" onKeyTyped="#textFieldColorChange" prefHeight="26.0" prefWidth="178.0" promptText="Re-Enter Password">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <Label id="lblUsername" layoutX="105.0" layoutY="429.0" text="Repeat Password:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btClientSignUp" layoutX="276.0" layoutY="476.0" mnemonicParsing="false" onAction="#clientSignUp" onMouseEntered="#setOnMouseEntered" onMouseExited="#setOnMouseExited" prefHeight="24.0" prefWidth="70.0" style="-fx-background-color: #80BCBD;" text="Sign Up" textFill="#f2f0f0">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label id="lblNewUser" layoutX="241.0" layoutY="513.0" text="Already a user?" textFill="#bfbfbf">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btLogInGoBack" layoutX="327.0" layoutY="508.0" mnemonicParsing="false" onAction="#userGoBack" onMouseEntered="#txtColorOnMouseEntered" onMouseExited="#txtColorOnMouseExited" style="-fx-background-color: #fff;" text="Log In" textFill="#80bcbd">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <VBox alignment="CENTER" layoutX="136.0" layoutY="531.0" prefHeight="44.0" prefWidth="338.0">
+                     <children>
+                        <Label fx:id="lblErrorSignUp" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="308.0" textFill="#e10b0b">
+                           <font>
+                              <Font name="Ebrima" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</HBox>

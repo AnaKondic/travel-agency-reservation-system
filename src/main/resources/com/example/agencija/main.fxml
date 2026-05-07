@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox id="lblWelcome" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="980.0" style="-fx-background-color: linear-gradient(to bottom right, #FBEEC1, #D4D3DD);" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.agencija.LogIn">
+   <padding>
+      <Insets bottom="80.0" left="80.0" right="80.0" top="80.0" />
+   </padding>
+   <children>
+      <BorderPane maxHeight="400.0" maxWidth="698.0" prefHeight="395.0" prefWidth="698.0" style="-fx-background-color: #ffffff; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);">
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView id="imageView" fitHeight="413.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/travel.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="33.0" layoutY="310.0" prefHeight="32.0" prefWidth="227.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);" text="Travel and Tourism" textFill="#ffffffe0">
+                     <font>
+                        <Font name="Ebrima Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="157.0" layoutY="353.0" prefHeight="32.0" prefWidth="104.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);" text="Agency" textFill="#ffffffcf">
+                     <font>
+                        <Font name="Ebrima Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="413.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="118.0" fitWidth="114.0" layoutX="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="95.0" layoutY="100.0" prefHeight="26.0" prefWidth="149.0" text="Welcome Back" textFill="#484747">
+                     <font>
+                        <Font name="Ebrima Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblLogin" layoutX="116.0" layoutY="127.0" text="Log in  to continue" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblUsername" layoutX="28.0" layoutY="194.0" text="Username:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField id="tfUsername" fx:id="tfUsername" layoutX="101.0" layoutY="191.0" onKeyTyped="#txtFieldColorChange" promptText="Enter Your Username">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></TextField>
+                  <Label id="lblPassword" layoutX="30.0" layoutY="240.0" text="Password:" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button id="btLogIn" fx:id="btLogIn" layoutX="134.0" layoutY="310.0" mnemonicParsing="false" onAction="#userLogIn" onMouseEntered="#setOnMouseEntered" onMouseExited="#setOnMouseExited" prefHeight="24.0" prefWidth="70.0" style="-fx-background-color: #80BCBD;" text="Log In" textFill="#f2f0f0">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label id="lblNewUser" layoutX="116.0" layoutY="347.0" text="New user?" textFill="#bfbfbf">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button id="btSignUp" fx:id="btSignUp" layoutX="175.0" layoutY="343.0" mnemonicParsing="false" onAction="#userSignUp" onMouseEntered="#txtColorOnMouseEntered" onMouseExited="#txtColorOnMouseExited" prefHeight="23.0" prefWidth="56.0" style="-fx-background-color: #fff;" text="Sign Up" textFill="#80bcbd">
+                     <font>
+                        <Font name="Ebrima Bold" size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <VBox alignment="CENTER" layoutX="-5.6" layoutY="358.0" prefHeight="42.0" prefWidth="342.0" AnchorPane.leftAnchor="-5.6" AnchorPane.rightAnchor="23.19999999999999">
+                     <children>
+                        <Label fx:id="lblErrorLogIn" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="330.0" textFill="#e10b0b" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="Ebrima" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <PasswordField fx:id="tfPassword" layoutX="103.0" layoutY="235.0" onKeyTyped="#setUnmaskedPass" promptText="Enter Your Password">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></PasswordField>
+                  <RadioButton fx:id="radioButton" layoutX="104.0" layoutY="270.0" mnemonicParsing="false" onAction="#maskPassword" text="Show my password?" textFill="#868383">
+                     <font>
+                        <Font name="Ebrima" size="10.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </RadioButton>
+                  <TextField fx:id="unmaskPassword" layoutX="104.0" layoutY="235.0" onKeyTyped="#setMaskedPass" promptText="Enter Your Paasowrd" visible="false" />
+               </children></AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</HBox>

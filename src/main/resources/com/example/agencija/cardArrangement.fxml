@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="210.0" prefWidth="230.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.agencija.CardArrangement">
+   <children>
+      <VBox layoutX="56.0" layoutY="-50.0" prefHeight="193.0" prefWidth="240.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxWidth="200.0" prefHeight="42.0" prefWidth="190.0">
+               <children>
+                  <Label fx:id="name" prefHeight="15.0" prefWidth="194.0" text="Ljetovanje na Jadranu">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="price" alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="103.0" text="0.0KM">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+            <AnchorPane maxHeight="200.0" maxWidth="232.0" prefHeight="194.0" prefWidth="232.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px;">
+               <children>
+                  <ImageView fitHeight="225.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/card-img.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="destination" layoutX="11.0" layoutY="19.2" prefHeight="15.0" prefWidth="157.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="Destinacija" textFill="WHITE" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="17.0">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lodging" layoutX="12.8" layoutY="74.0" prefHeight="18.0" prefWidth="172.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="Smjestaj" textFill="WHITE" AnchorPane.leftAnchor="12.8">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="departureDate" layoutX="11.2" layoutY="34.0" prefHeight="18.0" prefWidth="78.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="2024-01-01 " textFill="WHITE" AnchorPane.leftAnchor="11.2">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="arrivalDate" layoutX="103.0" layoutY="34.0" prefHeight="18.0" prefWidth="77.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="2024-01-01 " textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="transport" layoutX="12.8" layoutY="53.0" prefHeight="18.0" prefWidth="120.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="Prevoz" textFill="WHITE" AnchorPane.leftAnchor="13.0">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="roomType" layoutX="12.8" layoutY="118.0" prefHeight="18.0" prefWidth="106.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="Jednokrevetna" textFill="WHITE" AnchorPane.leftAnchor="12.8">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="87.0" layoutY="33.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="-" textFill="WHITE" />
+                  <Label fx:id="lblRating" layoutX="12.8" layoutY="96.0" prefHeight="18.0" prefWidth="45.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="Rating:" textFill="WHITE" AnchorPane.leftAnchor="12.8">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="rating" layoutX="58.0" layoutY="97.0" prefHeight="18.0" prefWidth="62.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="5.00" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPerNight" layoutX="12.8" layoutY="138.0" prefHeight="18.0" prefWidth="90.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="Price per night:" textFill="WHITE" AnchorPane.leftAnchor="12.8">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pricePerNight" layoutX="105.0" layoutY="139.0" prefHeight="18.0" prefWidth="71.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="100.00" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="-0.8" layoutY="166.6" maxHeight="37.0" maxWidth="215.0" prefHeight="0.0" prefWidth="200.0" AnchorPane.leftAnchor="-0.8" AnchorPane.rightAnchor="2.4000000000000057" AnchorPane.topAnchor="166.6">
+                     <children>
+                        <Button fx:id="btnBook" mnemonicParsing="false" onAction="#bookArrangement" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" style="-fx-background-color: #DAAD86;" text="Book" textFill="#f7f5f5" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="13.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <PasswordField fx:id="passConfirm" layoutX="6.0" prefHeight="27.0" prefWidth="120.0" promptText="Confirm password" style="-fx-border-color: #fff;" visible="false" />
+                        <Button fx:id="btnConfirm" layoutX="128.0" layoutY="-1.0" maxWidth="62.0" mnemonicParsing="false" onAction="#confirmPass" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="27.0" prefWidth="62.0" style="-fx-background-color: #DAAD86;" text="Confirm" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Ebrima Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</AnchorPane>

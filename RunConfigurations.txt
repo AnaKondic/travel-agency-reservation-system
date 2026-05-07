@@ -1,0 +1,1 @@
+--module-path "D:\Users\EC\Desktop\PMF\OOP\Agencija\javafx-sdk-20\lib" --add-modules javafx.controls,javafx.fxml

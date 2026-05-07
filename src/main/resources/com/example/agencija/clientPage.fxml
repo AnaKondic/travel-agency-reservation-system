@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="980.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.agencija.ClientPage">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="208.0" layoutY="144.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="670.4" prefWidth="890.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="56.0" prefWidth="890.0" style="-fx-background-color: #F2F1EB; -fx-border-color: #808080; -fx-border-width: .2px .4px .8px .4px;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="0.8" layoutY="-86.0" prefHeight="42.0" prefWidth="940.0" style="-fx-border-color: #000; -fx-border-width: .4px .4px .2px .4px; -fx-background-color: linear-gradient(to bottom right, #80BCBD, #C4E7D9);" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="14.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="11.0">
+                                 <image>
+                                    <Image url="@../../../img/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="67.0" layoutY="12.0" prefWidth="203.0" text="Travel and Tourism Agency" AnchorPane.leftAnchor="60.0">
+                                 <font>
+                                    <Font name="Ebrima" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnExit" alignment="CENTER" layoutX="833.0" layoutY="10.0" mnemonicParsing="false" onAction="#onExit" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="24.0" prefWidth="34.0" style="-fx-background-color: #80BCBD;" text="x" textFill="WHITE" AnchorPane.bottomAnchor="9.6" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="9.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnMinimize" alignment="CENTER" layoutX="804.0" layoutY="10.0" mnemonicParsing="false" onAction="#onMinimize" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="24.0" prefWidth="14.0" style="-fx-background-color: #80BCBD;" text="-" textFill="WHITE" AnchorPane.bottomAnchor="9.6" AnchorPane.rightAnchor="54.2" AnchorPane.topAnchor="9.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnBack" alignment="CENTER" layoutX="775.0" layoutY="11.0" mnemonicParsing="false" onAction="#navigation" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="24.0" prefWidth="50.0" style="-fx-background-color: #80BCBD;" text="&lt;" textFill="WHITE" AnchorPane.bottomAnchor="9.6" AnchorPane.rightAnchor="152.0" AnchorPane.topAnchor="9.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnForward" alignment="CENTER" layoutX="830.0" layoutY="9.600000000000001" mnemonicParsing="false" onAction="#navigation" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="24.0" prefWidth="50.0" style="-fx-background-color: #80BCBD;" text="&gt;" textFill="WHITE" AnchorPane.bottomAnchor="9.6" AnchorPane.rightAnchor="98.00000000000009" AnchorPane.topAnchor="9.0">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-0.8" layoutY="0.8" prefHeight="614.0" prefWidth="211.0" style="-fx-background-color: #80BCBD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="91.0" fitWidth="90.0" layoutX="56.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="58.0">
+                                 <image>
+                                    <Image url="@../../../img/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="clientFullName" alignment="CENTER" layoutX="29.0" layoutY="149.0" prefHeight="18.0" prefWidth="148.0" text="Petar Petrovic" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="26.0" prefWidth="158.0" text="Welcome User" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="clientUsername" alignment="CENTER" layoutX="25.0" layoutY="169.0" prefHeight="18.0" prefWidth="148.0" text="petar_petrovic" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+                                 <font>
+                                    <Font name="Ebrima" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="84.79995727539062" layoutX="106.0" layoutY="210.0" startX="-87.20001983642578" stroke="WHITE" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" />
+                              <Button fx:id="btnHome" layoutX="16.8" layoutY="246.0" mnemonicParsing="false" onAction="#switchForm" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/icons8-home-50.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnArrangements" layoutX="16.8" layoutY="282.0" mnemonicParsing="false" onAction="#switchForm" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: transparent;" text="Arrangements" textFill="WHITE" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/icons8-event-accepted-24.png" />
+                                       </image></ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnReservations" layoutX="16.8" layoutY="317.0" mnemonicParsing="false" onAction="#switchForm" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: transparent;" text="My reservations" textFill="#fcf8f8" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/icons8-list-30.png" />
+                                       </image></ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btLogOut" layoutX="46.0" layoutY="514.0" mnemonicParsing="false" onAction="#clientLogOut" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: transparent;" text="LOG OUT" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/icons8-log-out-30.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btnPassword" layoutX="16.8" layoutY="356.0" mnemonicParsing="false" onAction="#switchForm" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: transparent;" text="Change password" textFill="#fcf8f8" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/password.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <AnchorPane fx:id="passwordField" layoutX="1.0" layoutY="394.0" prefHeight="114.0" prefWidth="209.0" style="-fx-background-color: linear-gradient(to bottom right, #80BCBD, #C4E7D9); -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5,0,0,0);" visible="false" AnchorPane.topAnchor="400.0">
+                                 <children>
+                                    <TextField fx:id="tfOldPassword" layoutX="29.0" layoutY="11.0" promptText="Enter Your password" style="-fx-border-color: #fff;" />
+                                    <TextField fx:id="tfNewPassword" layoutX="29.0" layoutY="47.0" promptText="Enter a new password" style="-fx-border-color: #fff;" />
+                                    <Button fx:id="btnPassFieldClose" layoutX="48.0" layoutY="84.8" mnemonicParsing="false" onAction="#closePasswordChange" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="17.0" prefWidth="46.0" style="-fx-background-color: #fff;" text="Close" textFill="#9ed2be" AnchorPane.bottomAnchor="4.799999999999997">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnPassFieldUpdate" layoutX="100.0" layoutY="84.8" mnemonicParsing="false" onAction="#updatePasswordChange" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="22.0" prefWidth="58.0" style="-fx-background-color: #9ED2BE;" text="Update" textFill="WHITE" AnchorPane.bottomAnchor="4.799999999999997">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F1EB;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox fx:id="reservationsView" alignment="CENTER" prefHeight="614.4" prefWidth="728.8" style="-fx-background-color: EEE7DA;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="850.0" prefHeight="65.0" prefWidth="729.0" style="-fx-background-color: #F2F1EB; -fx-border-color: #d3d3d3; -fx-background-radius: 15px; -fx-border-radius: 15px;">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="154.0" text="Choose category:" textFill="#454545c6">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <RadioButton fx:id="rbActive" mnemonicParsing="false" onAction="#changeTableData" text="Active" textFill="#474747f5">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbPast" mnemonicParsing="false" onAction="#changeTableData" text="Past" textFill="#474747f5">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbCanceled" mnemonicParsing="false" onAction="#changeTableData" text="Canceled" textFill="#474747f5">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="13.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" maxWidth="850.0" prefHeight="372.0" prefWidth="708.0" style="-fx-background-color: #F2F1EB; -fx-border-color: #d3d3d3; -fx-background-radius: 15px; -fx-border-radius: 15px;">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <TableView fx:id="resTableView" maxWidth="-Infinity" minWidth="-Infinity" onMouseClicked="#getTableItems" prefHeight="300.0" prefWidth="564.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5,0,0,0);">
+                                             <columns>
+                                                <TableColumn fx:id="idCol" prefWidth="35.20002782344818" />
+                                                <TableColumn fx:id="nameCol" prefWidth="135.2000274658203" text="Name" />
+                                                <TableColumn fx:id="destCol" minWidth="0.0" prefWidth="161.60000610351562" text="Destination" />
+                                                <TableColumn fx:id="priceCol" maxWidth="303.9999084472656" minWidth="0.0" prefWidth="125.5999755859375" text="Total Price" />
+                                                <TableColumn fx:id="dueCol" maxWidth="312.8000183105469" minWidth="0.0" prefWidth="103.199951171875" text="Due" />
+                                             </columns>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <VBox alignment="TOP_CENTER" maxWidth="850.0" prefHeight="227.0" prefWidth="708.0" style="-fx-background-color: #F2F1EB; -fx-border-color: #d3d3d3; -fx-background-radius: 15px; -fx-border-radius: 15px;">
+                                 <children>
+                                    <AnchorPane maxWidth="706.0" prefHeight="27.0" prefWidth="706.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="infoMessage" layoutX="194.0" layoutY="9.0" prefHeight="18.0" prefWidth="306.0" text="Select a row of the table for further changes" textFill="#d9ab86" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="5.0">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblResName" alignment="CENTER" layoutX="187.2" layoutY="-3.0" prefHeight="26.0" prefWidth="391.0" textFill="#474747f5" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="5.0">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxWidth="706.0" prefHeight="200.0" prefWidth="706.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="56.0" layoutY="16.0" prefHeight="26.0" prefWidth="154.0" text="Total money spent:" textFill="#454545c6">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="273.0" layoutY="16.0" prefHeight="26.0" prefWidth="186.0" text="Pay the remaining price:" textFill="#454545c6">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="502.0" layoutY="16.0" prefHeight="26.0" prefWidth="154.0" text="Cancel reservation:" textFill="#454545c6">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="moneySpent" alignment="CENTER" layoutX="74.0" layoutY="44.0" prefHeight="26.0" prefWidth="98.0" text="1000KM" textFill="#474747f5">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnPay" layoutX="329.0" layoutY="90.0" mnemonicParsing="false" onAction="#payRemainingPrice" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: #9ED2BE;" text="Pay" textFill="WHITE">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="12.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <TextField fx:id="tfAmount" layoutX="244.0" layoutY="44.0" prefHeight="36.0" prefWidth="114.0" promptText="Enter the amount" style="-fx-border-color: #fff;" />
+                                          <Button fx:id="btnCancelRes" layoutX="549.0" layoutY="47.0" mnemonicParsing="false" onAction="#cancelReservation" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: #fff;" text="Cancel" textFill="#9ed2be">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="Ebrima Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <PasswordField fx:id="pfPassword" layoutX="365.0" layoutY="44.0" prefHeight="36.0" prefWidth="116.0" promptText="Confirm password" style="-fx-border-color: #fff;" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <AnchorPane fx:id="arrangementsView" prefHeight="614.4" prefWidth="728.8" style="-fx-background-color: EEE7DA;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="8.0" layoutY="10.0" prefHeight="590.0" prefWidth="445.0" style="-fx-background-color: #F2F1EB; -fx-border-color: #d3d3d3; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="276.0" AnchorPane.topAnchor="12.0">
+                                 <children>
+                                    <ScrollPane fx:id="arrScrollPane" hbarPolicy="NEVER" layoutX="9.0" layoutY="12.0" prefHeight="590.4" prefWidth="444.79999999999995" style="-fx-background-color: #F2F1EB; -fx-border-color: #d3d3d3; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <GridPane fx:id="arrGridPane" prefHeight="24.0" prefWidth="96.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                          </GridPane>
+                                       </content>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="431.0" layoutY="10.0" prefHeight="590.0" prefWidth="257.0" style="-fx-background-color: #F2F1EB; -fx-border-color: #d3d3d3; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+                                 <children>
+                                    <AnchorPane layoutX="7.400000000000006" layoutY="14.0" prefHeight="38.0" prefWidth="238.0" style="-fx-background-color: #fff; -fx-border-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.rightAnchor="8.0">
+                                       <children>
+                                          <RadioButton fx:id="rbOneDay" layoutX="5.0" layoutY="10.0" mnemonicParsing="false" onAction="#showOneDayArr" prefHeight="16.0" prefWidth="126.0" text="one-day excursion" textFill="#474747">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="12.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                          <RadioButton fx:id="rbTravel" layoutX="134.0" layoutY="11.0" mnemonicParsing="false" onAction="#showTravelArr" text="travel package" textFill="#474747">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="12.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </RadioButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="16.0" layoutY="97.0" prefHeight="26.0" prefWidth="72.0" text="Sort by:" textFill="#474747" AnchorPane.leftAnchor="10.0">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnLowPriced" layoutX="93.0" layoutY="96.0" mnemonicParsing="false" onAction="#sortByPrice" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #DAAD86;" text="Price" textFill="WHITE" AnchorPane.rightAnchor="102.20000000000002">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="btnDate" layoutX="161.0" layoutY="96.0" mnemonicParsing="false" onAction="#sortByDate" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #DAAD86;" text="Date" textFill="WHITE" AnchorPane.rightAnchor="34.20000000000002">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label layoutX="12.8" layoutY="179.0" prefHeight="26.0" prefWidth="92.0" text="Filters:" textFill="#474747" AnchorPane.leftAnchor="10.0">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="65.6" layoutY="173.0" prefHeight="41.0" prefWidth="162.0" style="-fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="5.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/money_8126629.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="tfPrice" layoutX="29.0" layoutY="8.0" prefHeight="26.0" prefWidth="122.0" promptText="Enter price" style="-fx-border-color: #fff; -fx-background-radius: 15px; -fx-border-radius: 15px;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="12.0" layoutY="227.0" prefHeight="42.0" prefWidth="236.0" style="-fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <TextField fx:id="tfDate1" layoutX="28.0" layoutY="8.0" prefHeight="27.0" prefWidth="90.0" promptText="yyyy-MM-dd" style="-fx-border-color: #fff; -fx-border-radius: 15px; -fx-background-radius: 15px;" />
+                                          <TextField fx:id="tfDate2" layoutX="123.0" layoutY="8.0" prefHeight="27.0" prefWidth="90.0" promptText="yyyy-MM-dd" style="-fx-border-color: #fff; -fx-border-radius: 15px; -fx-background-radius: 15px;" />
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="4.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/calendar_2278049.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="79.0" layoutY="281.0" prefHeight="42.0" prefWidth="221.0" style="-fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="5.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/maps-flags_447031.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="tfDestination" layoutX="29.0" layoutY="8.0" prefHeight="27.0" prefWidth="178.0" promptText="Enter destination" style="-fx-border-color: #fff; -fx-border-radius: 15px; -fx-background-radius: 15px;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="79.0" layoutY="331.0" prefHeight="42.0" prefWidth="221.0" style="-fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="5.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/rate_7440730.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="tfStarRating" layoutX="29.0" layoutY="8.0" prefHeight="27.0" prefWidth="180.0" promptText="Enter star rating" style="-fx-border-color: #fff; -fx-border-radius: 15px; -fx-background-radius: 15px;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="80.0" layoutY="386.0" prefHeight="42.0" prefWidth="221.0" style="-fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="5.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/hotel-bed_8164663.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ChoiceBox fx:id="cbRoomType" layoutX="32.0" layoutY="9.0" prefHeight="27.0" prefWidth="174.0" style="-fx-border-color: #fff; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="80.0" layoutY="443.0" prefHeight="42.0" prefWidth="221.0" style="-fx-background-color: #fff; -fx-background-radius: 10px; -fx-border-radius: 10px;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="5.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/bus_285540.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ChoiceBox fx:id="cbTransport" layoutX="31.0" layoutY="7.0" prefHeight="27.0" prefWidth="180.0" style="-fx-border-color: #fff; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-background-color: #fff;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Button fx:id="btnFilter" layoutX="174.0" layoutY="502.0" mnemonicParsing="false" onAction="#filterArrangements" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="23.0" prefWidth="62.0" style="-fx-background-color: #DAAD86;" text="Filter" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+                                       <font>
+                                          <Font name="Ebrima Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Line endX="123.50003051757812" layoutX="111.70000000000002" layoutY="69.0" startX="-100.0" stroke="#c4c1a49e" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0" />
+                                    <Line endX="-324.4038391113281" layoutX="128.0" layoutY="158.0" startX="-99.3038330078125" stroke="#c4c1a49e" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="homeView" prefHeight="614.4" prefWidth="768.8" style="-fx-background-color: EEE7DA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="174.0" layoutY="142.0" prefHeight="614.4" prefWidth="768.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane prefHeight="524.0" prefWidth="604.0" style="-fx-background-color: #F2F1EB; -fx-border-color: #d3d3d3; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+                                       <children>
+                                          <ImageView fitHeight="242.0" fitWidth="615.0" layoutX="3.2" layoutY="3.2" opacity="0.8" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <image>
+                                                <Image url="@../../../img/background.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="191.0" fitWidth="193.0" layoutX="204.0" layoutY="86.0" opacity="0.93" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);">
+                                             <image>
+                                                <Image url="@../../../img/nature2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="205.0" fitWidth="187.0" layoutX="408.0" layoutY="86.0" opacity="0.98" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);">
+                                             <image>
+                                                <Image url="@../../../img/travel1.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="14.0" layoutY="104.0" text="Let's Explore" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="26.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="142.0" text="the world" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnBookTour" layoutX="14.0" layoutY="196.0" mnemonicParsing="false" onAction="#switchForm" onMouseEntered="#btnMouseEntered" onMouseExited="#btnMouseExited" prefHeight="27.0" prefWidth="102.0" style="-fx-background-color: #DAAD86; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);" text="Book A Tour" textFill="WHITE">
+                                             <font>
+                                                <Font name="Ebrima Bold" size="13.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <ScrollPane hbarPolicy="NEVER" layoutX="3.0" layoutY="320.0" prefHeight="431.0" prefWidth="603.0" style="-fx-border-color: #F2F1EB;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="319.0">
+                                             <content>
+                                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="670.0" prefWidth="590.0" style="-fx-background-color: #F2F1EB;">
+                                                   <children>
+                                                      <AnchorPane layoutX="15.2" layoutY="33.0" prefHeight="143.0" prefWidth="284.0" style="-fx-background-color: DDDDDD;" AnchorPane.leftAnchor="15.0">
+                                                         <children>
+                                                            <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="177.0" text="All Seasons Travel" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Line endX="100.0" layoutX="115.0" layoutY="53.0" startX="-100.0" stroke="WHITE" />
+                                                            <Text fill="#484747" layoutX="13.0" layoutY="84.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="If it’s a cruise, international flights, hotels, resorts, all-in-one holidays, or even budget accommodation – we can help you find a great deal." wrappingWidth="276.3976593017578" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="71.953125">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="295.0" layoutY="33.0" prefHeight="142.0" prefWidth="280.0" style="-fx-background-color: DDDDDD;" AnchorPane.rightAnchor="14.0">
+                                                         <children>
+                                                            <Text fill="#484747" layoutX="19.2" layoutY="89.6" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="We offer you the experience and peace of mind you need when booking your travel needs throughout the season. " wrappingWidth="246.79763793945312" AnchorPane.leftAnchor="19.2" AnchorPane.topAnchor="71.953125">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <ImageView fitHeight="197.0" fitWidth="135.0" layoutX="15.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);">
+                                                         <image>
+                                                            <Image url="@../../../img/winter.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="197.0" fitWidth="135.0" layoutX="156.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);">
+                                                         <image>
+                                                            <Image url="@../../../img/spring.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="197.0" fitWidth="135.0" layoutX="297.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);">
+                                                         <image>
+                                                            <Image url="@../../../img/summer.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="197.0" fitWidth="135.0" layoutX="438.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.3), 10.0 , 0.0 , 0.0 ,10.0);">
+                                                         <image>
+                                                            <Image url="@../../../img/autumn.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label alignment="CENTER" layoutX="55.0" layoutY="247.0" text="Winter" textFill="WHITE" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="247.0">
+                                                         <font>
+                                                            <Font name="Ebrima Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="197.0" layoutY="400.0" text="Spring" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Ebrima Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="331.0" layoutY="247.0" text="Summer" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Ebrima Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="473.0" layoutY="400.0" text="Autumn" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Ebrima Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <AnchorPane layoutX="17.0" layoutY="482.0" prefHeight="166.0" prefWidth="556.0" style="-fx-background-color: DDDDDD;">
+                                                         <children>
+                                                            <Label layoutX="208.0" layoutY="14.0" text="WHY CHOOSE US?" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="40.0" layoutY="89.0" text="AFFORDABLE PRICE" textAlignment="CENTER" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="54.0" layoutY="107.0" text="GUARANTEE" textAlignment="CENTER" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" layoutX="232.0" layoutY="107.0" prefHeight="15.0" prefWidth="112.0" text="WIDE VARIETY OF" textAlignment="CENTER" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" layoutX="230.0" layoutY="126.0" prefHeight="15.0" prefWidth="112.0" text="DESTINATIONS" textAlignment="CENTER" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" layoutX="421.0" layoutY="90.0" prefHeight="15.0" prefWidth="112.0" text="HIGHLY QUALIFIED" textAlignment="CENTER" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" layoutX="416.0" layoutY="109.0" prefHeight="15.0" prefWidth="112.0" text="SERVICE" textAlignment="CENTER" textFill="#484747">
+                                                               <font>
+                                                                  <Font name="Ebrima Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="272.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../img/airplane.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="457.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../img/like.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="78.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../../../img/currency.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content></ScrollPane>
+                                          <ImageView fitHeight="259.0" fitWidth="221.0" layoutX="283.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);">
+                                             <image>
+                                                <Image url="@../../../img/nature1.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
